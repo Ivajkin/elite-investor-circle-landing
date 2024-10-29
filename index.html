@@ -568,51 +568,61 @@
         </div>
 
         <div class="col-lg-7">
-          <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-            <h3>Request Access</h3>
-            <p>Fill out the form below, and we'll get back to you promptly.</p>
+          <div class="contact-form p-4 rounded-3 shadow-sm" style="background-color: #f9f9f9;" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="mb-3 text-center" style="font-weight: 600; color: #333;">Request Access</h3>
+            <p class="text-center mb-4" style="color: #666;">Fill out the form below, and we'll get back to you promptly.</p>
 
             <!-- Formspree form integration -->
-            <form action="https://formspree.io/f/mnnqjklb" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
+            <form action="https://formspree.io/f/mnnqjklb" method="POST" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-3">
 
+                <!-- Name Field -->
                 <div class="col-md-6">
-                  <label>
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <label style="display: block; font-weight: 500; color: #555;">
+                    Your Name
+                    <input type="text" name="name" class="form-control mt-2 p-3 rounded-2 border-0" placeholder="Enter your name" required="" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
                   </label>
                 </div>
 
+                <!-- Email Field -->
                 <div class="col-md-6">
-                  <label>
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <label style="display: block; font-weight: 500; color: #555;">
+                    Your Email
+                    <input type="email" name="email" class="form-control mt-2 p-3 rounded-2 border-0" placeholder="Enter your email" required="" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
                   </label>
                 </div>
 
+                <!-- Subject Field -->
                 <div class="col-12">
-                  <label>
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <label style="display: block; font-weight: 500; color: #555;">
+                    Subject
+                    <input type="text" name="subject" class="form-control mt-2 p-3 rounded-2 border-0" placeholder="Subject" required="" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
                   </label>
                 </div>
 
+                <!-- Message Field -->
                 <div class="col-12">
-                  <label>
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <label style="display: block; font-weight: 500; color: #555;">
+                    Message
+                    <textarea name="message" rows="6" class="form-control mt-2 p-3 rounded-2 border-0" placeholder="Write your message here..." required="" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);"></textarea>
                   </label>
                 </div>
 
-                <div class="col-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message">There was an error. Please try again.</div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                <!-- Submission Button and Feedback Messages -->
+                <div class="col-12 text-center mt-4">
+                  <div class="loading mb-2" style="display: none; color: #999;">Loading...</div>
+                  <div class="error-message mb-2 text-danger" style="display: none;">There was an error. Please try again.</div>
+                  <div class="sent-message mb-2 text-success" style="display: none;">Your message has been sent. Thank you!</div>
 
-                  <button type="submit" class="btn">Send Message</button>
+                  <button type="submit" class="btn btn-primary px-4 py-2" style="border-radius: 25px; background-color: #333; color: #fff; font-weight: 500;">
+                    Send Message
+                  </button>
                 </div>
 
               </div>
             </form>
           </div>
         </div>
-
 
       </div>
 
