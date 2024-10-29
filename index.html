@@ -9,8 +9,8 @@
   <meta name="keywords" content="Elite Investor Circle, Investment, High-Net-Worth Individuals, Exclusive Opportunities, Wealth Strategies, Financial Growth">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.webp" rel="icon">
+  <link href="assets/img/apple-touch-icon.webp" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -93,11 +93,11 @@
 
             <div class="customers-badge">
               <div class="customer-avatars">
-                <img src="assets/img/avatar-1.jpg" alt="Member 1" class="avatar">
-                <img src="assets/img/avatar-2.jpg" alt="Member 2" class="avatar">
-                <img src="assets/img/avatar-3.jpg" alt="Member 3" class="avatar">
-                <img src="assets/img/avatar-4.jpg" alt="Member 4" class="avatar">
-                <img src="assets/img/avatar-5.jpg" alt="Member 5" class="avatar">
+                <img src="assets/img/avatar-1.webp" alt="Member 1" class="avatar">
+                <img src="assets/img/avatar-2.webp" alt="Member 2" class="avatar">
+                <img src="assets/img/avatar-3.webp" alt="Member 3" class="avatar">
+                <img src="assets/img/avatar-4.webp" alt="Member 4" class="avatar">
+                <img src="assets/img/avatar-5.webp" alt="Member 5" class="avatar">
                 <span class="avatar more">100+</span>
               </div>
               <p class="mb-0 mt-2">Join a network of over 100 elite investors worldwide</p>
@@ -561,7 +561,7 @@
               </div>
               <div class="content">
                 <h4>Email Address</h4>
-                <p>info@eliteinvestorcircle.com</p> <!-- Updated Email Address -->
+                <p>info@eliteinvestorcircle.org</p> <!-- Updated Email Address -->
               </div>
             </div>
           </div>
@@ -572,28 +572,37 @@
             <h3>Request Access</h3>
             <p>Fill out the form below, and we'll get back to you promptly.</p>
 
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <!-- Formspree form integration -->
+            <form action="https://formspree.io/f/mnnqjklb" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <label>
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  </label>
                 </div>
 
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                <div class="col-md-6">
+                  <label>
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  </label>
                 </div>
 
                 <div class="col-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <label>
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  </label>
                 </div>
 
                 <div class="col-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <label>
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  </label>
                 </div>
 
                 <div class="col-12 text-center">
                   <div class="loading">Loading</div>
-                  <div class="error-message"></div>
+                  <div class="error-message">There was an error. Please try again.</div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
 
                   <button type="submit" class="btn">Send Message</button>
@@ -601,9 +610,9 @@
 
               </div>
             </form>
-
           </div>
         </div>
+
 
       </div>
 
@@ -624,7 +633,7 @@
         <div class="footer-contact pt-3">
           <p>Dubai, UAE</p> <!-- Updated Physical Address -->
           <p class="mt-3"><strong>Phone:</strong> <span>+971 5246 49121</span></p> <!-- Updated Phone Number -->
-          <p><strong>Email:</strong> <span>info@eliteinvestorcircle.com</span></p> <!-- Updated Email Address -->
+          <p><strong>Email:</strong> <span>info@eliteinvestorcircle.org</span></p> <!-- Updated Email Address -->
         </div>
         <div class="social-links d-flex mt-4">
           <a href="https://twitter.com/EliteInvestorCircle"><i class="bi bi-twitter"></i></a> <!-- Updated Social Links -->

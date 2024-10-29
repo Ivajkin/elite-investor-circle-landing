@@ -133,4 +133,47 @@
   window.addEventListener('load', updateScrollspy);
   document.addEventListener('scroll', updateScrollspy);
 
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const form = event.target;
+    const loading = document.querySelector('.loading');
+    const sentMessage = document.querySelector('.sent-message');
+    const errorMessage = document.querySelector('.error-message');
+
+    loading.style.display = 'block';
+    sentMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
+
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+        .then(async response => {
+          loading.style.display = 'none';
+          if (response.ok) {
+            const data = await response.json();
+            if (data.next) {
+              // Option 1: Redirect to thank you page
+              window.location.href = data.next;
+            } else {
+              // Option 2: Show success message without redirection
+              sentMessage.style.display = 'block';
+              form.reset();
+            }
+          } else {
+            const errorData = await response.json();
+            errorMessage.textContent = errorData.error || 'There was an error. Please try again.';
+            errorMessage.style.display = 'block';
+          }
+        })
+        .catch(() => {
+          loading.style.display = 'none';
+          errorMessage.textContent = 'There was an error. Please try again.';
+          errorMessage.style.display = 'block';
+        });
+  });
+
 })();
